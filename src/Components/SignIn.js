@@ -52,6 +52,7 @@
 
 
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const SignIn = () => {
   const [email, setEmail] = useState('');
@@ -106,7 +107,7 @@ const SignIn = () => {
                   </div>
                   <div className="d-flex flex-stack flex-wrap gap-3 fs-base fw-semibold mb-8">
                     <div></div>
-                    <a href="#" className="link-primary">
+                    <a href=" " className="link-primary">
                       Forgot Password?
                     </a>
                   </div>
@@ -120,15 +121,15 @@ const SignIn = () => {
                     </button>
                   </div>
                   <div className="text-gray-500 text-center fw-semibold fs-6">
-                    Not yet registered? <a href="sign-up.html" className="link-primary">Sign up</a>
+                    Not yet registered? <Link to="/sign-up" className="link-primary">Sign up</Link>
                   </div>
                 </form>
               </div>
             </div>
           </div>
-          <div className="d-flex flex-lg-row-fluid w-lg-50 bgi-size-cover bgi-position-center order-1 order-lg-2" style={{ backgroundImage: "url(assets/media/misc/login-cover.jpg)" }}>
+          <div className="d-flex flex-lg-row-fluid w-lg-50 bgi-size-cover bgi-position-center order-1 order-lg-2" style={{ backgroundImage: "url(assets/media/misc/login-cover.jpg)", height: "100vh" }}>
             <div className="d-flex flex-column flex-center py-7 py-lg-15 px-5 px-md-15 w-100">
-              <a href="#" className="mb-0 mb-lg-12">
+              <a href=" " className="mb-0 mb-lg-12">
                 <img alt="Logo" src="assets/media/logos/logo-img.png" className="h-50px h-lg-65px" />
               </a>
             </div>
