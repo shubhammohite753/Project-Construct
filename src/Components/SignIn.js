@@ -1,74 +1,74 @@
-// import React, { useState } from 'react';
-// const SignIn=() => {
-//     const [email, setEmail] =useState("");
-//     const [pass, setPass] =useState("");
-
-//     const [allEntry,setAllEntry] = useState([]);
-//     const submitForm = (e) => {
-//         e.preventDefault()
-
-//         const newEntry = { id: new Date().toString, email, pass};
-
-//         setAllEntry([...allEntry, newEntry]);
-//         console.log(allEntry);
-
-//         setEmail("");
-//         setPass("");
-//     }
-//     return ( 
-//         <>
-//         <form action='' onSubmit={submitForm}>
-//             <div>
-//                 <input type="email" placeholder='Email' name='email' id='email' autoComplete='off'
-//                 value={email}
-//                 onChange={(e) => setEmail(e.target.value)}/>
-//             </div>
-//             <div>
-//                 <input type="password" placeholder='Password' name='password' id='password' autoComplete='off' 
-//                 value={pass}
-//                 onChange={(e) => setPass(e.target.value)}/>
-//             </div>
-//             <button type='submit'>Login</button>
-//         </form>
-//         {/* for demo the data showing */}
-//         <div>
-//             {
-//                 allEntry.map((curElem) => {
-                
-//                     return (
-//                         <div className="showDataStyle" key={curElem.id}>
-//                             <p>{curElem.email}</p>
-//                             <p>{curElem.pass}</p>
-//                         </div>
-//                     )
-//                 })
-//             }
-//         </div>
-//         </>
-//      );
-// }
-
-// export default SignIn;
-
-
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const SignIn = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [allEntries, setAllEntries] = useState([]);
+  // const [allEntry, setAllEntries] = useState([]);
+  // const [emailError, setEmailError] = useState('');
 
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+
+  //   const newEntry = { email, password };
+  //   setAllEntries([...allEntry, newEntry]);
+
+  //   setEmail('');
+  //   setPassword('');
+  // };
+   
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    const newEntry = { email, password };
-    setAllEntries([...allEntries, newEntry]);
-
-    setEmail('');
-    setPassword('');
+  
+    // validateEmail();
+    // validatePassword();
+  
+  //   if (!emailError && !passwordError) {
+  //     const newEntry = { email, password };
+  //     setAllEntries([...allEntry, newEntry]);
+  
+  //     setEmail('');
+  //     setPassword('');
+  //   }
   };
+  
 
+  // ---------validation of email and password------------
+  // const validateEmail = () => {
+  //   if (!email) {
+  //     setEmailError('Email is required.');
+  //   } else if (!/\S+@\S+\.\S+/.test(email)) {
+  //     setEmailError('Invalid email address.');
+  //   } else {
+  //     setEmailError('');
+  //   }
+  // };
+  
+  // const validatePassword = () => {
+  //   if (!password) {
+  //     setPasswordError('Password is required.');
+  //   } else if (password.length < 8) {
+  //     setPasswordError('Password must be at least 8 characters long.');
+  //   } else {
+  //     setPasswordError('');
+  //   }
+  // };
+  
+  // -----------------------
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = '/general.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    
+  
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+  
+  // ---------------------------
   return (
     <div id="kt_body" className="app-blank">
       <div className="d-flex flex-column flex-root" id="kt_app_root">
@@ -91,8 +91,10 @@ const SignIn = () => {
                       autoComplete="off"
                       className="form-control bg-transparent"
                       value={email}
-                      onChange={(e) => setEmail(e.target.value)}
+                      onChange={(e) => setEmail(e.target.value)} 
+                      // onBlur={validateEmail}
                     />
+                    {/* {emailError && <div className="error">{emailError}</div>} */}
                   </div>
                   <div className="fv-row mb-3">
                     <input
@@ -103,7 +105,9 @@ const SignIn = () => {
                       className="form-control bg-transparent"
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
+                      // onBlur={validatePassword}
                     />
+                    {/* {passwordError && <div className="error">{passwordError}</div>} */}
                   </div>
                   <div className="d-flex flex-stack flex-wrap gap-3 fs-base fw-semibold mb-8">
                     <div></div>
@@ -129,18 +133,34 @@ const SignIn = () => {
           </div>
           <div className="d-flex flex-lg-row-fluid w-lg-50 bgi-size-cover bgi-position-center order-1 order-lg-2" style={{ backgroundImage: "url(assets/media/misc/login-cover.jpg)", height: "100vh" }}>
             <div className="d-flex flex-column flex-center py-7 py-lg-15 px-5 px-md-15 w-100">
-              <a href=" " className="mb-0 mb-lg-12">
+              <a href="#" className="mb-0 mb-lg-12">
                 <img alt="Logo" src="assets/media/logos/logo-img.png" className="h-50px h-lg-65px" />
               </a>
             </div>
           </div>
         </div>
       </div>
-      <script>var hostUrl = "assets/";</script>
-      <script src="assets/plugins/global/plugins.bundle.js"></script>
+      {/* <script>var hostUrl = "assets/";</script> */}
+      {/* <script src="assets/plugins/global/plugins.bundle.js"></script>
       <script src="assets/js/scripts.bundle.js"></script>
-      <script src="assets/js/custom/authentication/sign-in/general.js"></script>
+      <script src="assets/js/custom/authentication/sign-in/general.js"></script> */}
+
+      {/* --------for showing input field -------- */}
+       {/* <div>
+            {
+                allEntry.map((curElem) => {
+                
+                    return (
+                        <div className="showDataStyle" key={curElem.id}>
+                            <p>{curElem.email}</p>
+                            <p>{curElem.password}</p>
+                        </div>
+                    )
+                })
+            }
+        </div> */}
     </div>
+    
   );
 };
 

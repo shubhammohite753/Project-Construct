@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 import { Link } from 'react-router-dom';
 
 export const RegisterNow = () => {
@@ -19,6 +19,20 @@ export const RegisterNow = () => {
         repeatPassword
       });
     };
+
+// ---------------------------
+useEffect(() => {
+  const script = document.createElement('script');
+  script.src = '/generalreg.js';
+  script.async = true;
+  document.body.appendChild(script);
+
+  return () => {
+    document.body.removeChild(script);
+  };
+}, []);
+
+// -------------------------------
     return(
       <div className="d-flex flex-column flex-root" id="kt_app_root">
         <div className="d-flex flex-column flex-lg-row flex-column-fluid">
