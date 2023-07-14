@@ -123,6 +123,7 @@ const SignIn = () => {
                         <span className="spinner-border spinner-border-sm align-middle ms-2"></span>
                       </span>
                     </button>
+                    
                   </div>
                   <div className="text-gray-500 text-center fw-semibold fs-6">
                     Not yet registered? <Link to="/sign-up" className="link-primary">Sign up</Link>
