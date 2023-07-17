@@ -88,7 +88,7 @@ const SignIn = () => {
           </div>
           <div className="d-flex flex-lg-row-fluid w-lg-50 bgi-size-cover bgi-position-center order-1 order-lg-2" style={{ backgroundImage: "url(assets/media/misc/login-cover.jpg)", height: "100vh" }}>
             <div className="d-flex flex-column flex-center py-7 py-lg-15 px-5 px-md-15 w-100">
-              <a href="#" className="mb-0 mb-lg-12">
+              <a href=" " className="mb-0 mb-lg-12">
                 <img alt="Logo" src="assets/media/logos/logo-img.png" className="h-50px h-lg-65px" />
               </a>
             </div>

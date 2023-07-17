@@ -1,20 +1,37 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const TwoStepVerification = () => {
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = '/two-steps.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    
+  
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
+
   return (
+    <div id="kt_body" class="app-blank">
     <div className="d-flex flex-column flex-root" id="kt_app_root">
       <div className="d-flex flex-column flex-lg-row flex-column-fluid">
         <div className="d-flex flex-column flex-lg-row-fluid w-lg-50 p-10 order-2 order-lg-1">
           <div className="d-flex flex-center flex-column flex-lg-row-fluid">
             <div className="w-lg-500px p-10">
-              <form className="form w-100 mb-13" noValidate="novalidate" data-kt-redirect-url="index.html" id="kt_sing_in_two_steps_form" action="#">
+              <form className="form w-100 mb-13" noValidate="novalidate" data-kt-redirect-url="/dashboard" id="kt_sing_in_two_steps_form" action="#">
                 <div className="text-center mb-5">
                   <img alt="Logo" className="mh-100px" src="assets/media/svg/misc/smartphone-2.svg" />
                 </div>
                 <div className="text-center mb-10">
                   <h1 className="text-dark mb-3">Two Step Verification</h1>
                   <div className="text-muted fw-semibold fs-5 mb-5">Enter the verification code we sent to</div>
-                  <div className="fw-bold text-dark fs-3">******7859</div>
+                  <div className="fw-bold text-dark fs-3">******9735</div>
                 </div>
                 <div className="mb-10">
                   <div className="fw-bold text-start text-dark fs-6 mb-1 ms-1">Type your 6 digit security code</div>
@@ -28,7 +45,7 @@ const TwoStepVerification = () => {
                   </div>
                 </div>
                 <div className="d-flex flex-center">
-                  <button type="button" id="kt_sing_in_two_steps_submit" className="btn btn-lg btn-dark fw-bold">
+                  <button type='button' id="kt_sing_in_two_steps_submit" className="btn btn-lg btn-dark fw-bold">
                     <span className="indicator-label">Submit</span>
                     <span className="indicator-progress">Please wait...
                       <span className="spinner-border spinner-border-sm align-middle ms-2"></span>
@@ -51,6 +68,7 @@ const TwoStepVerification = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };
