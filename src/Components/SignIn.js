@@ -65,9 +65,9 @@ const SignIn = () => {
                   </div>
                   <div className="d-flex flex-stack flex-wrap gap-3 fs-base fw-semibold mb-8">
                     <div></div>
-                    <a href=" " className="link-primary">
+                    <Link to="/forgotpassword" className="link-primary">
                       Forgot Password?
-                    </a>
+                    </Link>
                   </div>
                   <div className="d-grid mb-10">
                     <button type="submit" id="kt_sign_in_submit" className="btn btn-dark">
