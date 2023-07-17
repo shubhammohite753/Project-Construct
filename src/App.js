@@ -10,7 +10,7 @@ function App() {
       <Routes>
         <Route path="/sign-up" element={<RegisterNow />}/>
         <Route path="/" element={<SignIn />}/>
-        <Route path="/twostepverification" element={<TwoStepVerification/>} />
+        <Route path="/otp-verification" element={<TwoStepVerification/>} />
       </Routes>
       </BrowserRouter>
     </div>
