@@ -6,6 +6,7 @@ import TwoStepVerification from "./Components/TwoStepVerification";
 import Dashboard from "./Components/Dashboard";
 import ForgotPassword from "./Components/ForgotPassword";
 import TermsAndConditions from "./Components/TermsAndConditions";
+import Help from "./Components/Help";
 function App() {
   return (
     <div>
@@ -17,6 +18,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard/>} />
         <Route path="/forgotpassword" element={<ForgotPassword/>}/>
         <Route path="/termsandconditions" element={<TermsAndConditions/>}/>
+        <Route path="/help" element={<Help/>}/>
       </Routes>
       </BrowserRouter>
     </div>
