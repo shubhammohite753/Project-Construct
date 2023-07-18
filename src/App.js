@@ -7,6 +7,7 @@ import Dashboard from "./Components/Dashboard";
 import ForgotPassword from "./Components/ForgotPassword";
 import TermsAndConditions from "./Components/TermsAndConditions";
 import Project from "./Components/Project";
+import Help from "./Components/Help";
 function App() {
 
   useEffect(() => {
@@ -37,6 +38,7 @@ function App() {
         <Route path="/forgotpassword" element={<ForgotPassword/>}/>
         <Route path="/termsandconditions" element={<TermsAndConditions/>}/>
         <Route path="/project" element={<Project/>} />
+        <Route path="/help" element={<Help/>}/>
       </Routes>
       </BrowserRouter>
     </div>
