@@ -15,8 +15,8 @@ const ForgotPassword = () => {
   };
 
   return (
-    <div id="kt_body" className="app-blank">
-      <div className="d-flex flex-column flex-root" id="kt_app_root">
+    <div id="kt_body_root" className="d-flex flex-column flex-root vh-100">
+      <div className="d-flex flex-column flex-lg-row flex-column-fluid" id="kt_app_root">
         <div className="d-flex flex-column flex-lg-row flex-column-fluid">
           <div className="d-flex flex-column flex-lg-row-fluid w-lg-50 p-10 order-2 order-lg-1">
             <div className="d-flex flex-center flex-column flex-lg-row-fluid">
@@ -24,11 +24,11 @@ const ForgotPassword = () => {
                 <form
                   className="form w-100"
                   noValidate
-                  id="kt_sign_in_form"
+                  // id="kt_sign_in_form"
                   onSubmit={handleSubmit(handleFormSubmit)}
                 >
                   <div className="text-center mb-11">
-                    <h1 className="text-dark fw-bolder mb-3">Forgot Password</h1>
+                    <h1 className="text-dark fw mb-3">Forgot Password</h1>
                     <div className="text-gray-400 fw-bold fs-4">
                       Enter your email to reset your password
                     </div>
@@ -43,7 +43,7 @@ const ForgotPassword = () => {
                       <div className="fv-row mb-10">
                         <input
                           type="email"
-                          className="form-control form-control-lg"
+                          className="form-control bg-transparent"
                           placeholder="Email"
                           {...register('email', {
                             required: 'Email is required',
@@ -73,14 +73,14 @@ const ForgotPassword = () => {
           </div>
           <div
             className="d-flex flex-lg-row-fluid w-lg-50 bgi-size-cover bgi-position-center order-1 order-lg-2"
-            style={{ backgroundImage: "url(assets/media/misc/login-cover.jpg)", height: "100vh" }}
+            style={{ backgroundImage: "url(assets/media/misc/login-cover.jpg)" }}
           >
             <div className="d-flex flex-column flex-center py-7 py-lg-15 px-5 px-md-15 w-100">
               <a href="/" className="mb-0 mb-lg-12">
                 <img
                   alt="Logo"
                   src="assets/media/logos/logo-img.png"
-                  className="h-50px h-lg-65px"
+                  className="h-60px h-lg-65px"
                 />
               </a>
             </div>
