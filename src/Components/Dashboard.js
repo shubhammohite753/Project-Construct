@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Dashboard = () => {
 
@@ -50,7 +51,7 @@ const Dashboard = () => {
               {/*end::Header mobile toggle*/}
               {/*begin::Logo*/}
               <div className="d-flex align-items-center flex-grow-1 flex-lg-grow-0 me-lg-18">
-                <a href="#">
+                <a href=" ">
                   <img alt="Logo" src="assets/media/logos/logo-img.png" className="h-30px d-sm-none" />
                   <img alt="Logo" src="assets/media/logos/logo-img.png" className="h-30px d-none d-sm-block" />
                 </a>
@@ -76,7 +77,7 @@ const Dashboard = () => {
                     <div data-kt-menu-placement="bottom-start" data-kt-menu-offset="-200,0" className="menu-item menu-lg-down-accordion me-0 me-lg-2">
                       {/*begin:Menu link*/}
                       <span className="menu-link">
-                        <a href="project.html"><span className="menu-title">Projects</span></a>
+                        <Link to="/project"><span className="menu-title">Projects</span></Link>
                         <span className="menu-arrow d-lg-none" />
                       </span>
                       {/*end:Menu link*/}
@@ -183,7 +184,7 @@ const Dashboard = () => {
                       {/*end:Nav*/}
                       {/*begin::View more*/}
                       <div className="py-2 text-center border-top">
-                        <a href="#" className="btn btn-color-gray-600 btn-active-color-primary">View All
+                        <a href=" " className="btn btn-color-gray-600 btn-active-color-primary">View All
                           {/*begin::Svg Icon | path: icons/duotune/arrows/arr064.svg*/}
                           <span className="svg-icon svg-icon-5">
                             <svg width={24} height={24} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -219,7 +220,7 @@ const Dashboard = () => {
                           <div className="d-flex flex-column">
                             <div className="fw-bold d-flex align-items-center fs-5">Amit Desai
                               <span className="badge badge-light-success fw-bold fs-8 px-2 py-1 ms-2">Admin</span></div>
-                            <a href="#" className="fw-semibold text-muted text-hover-primary fs-7">amit@cumilab.co.in</a>
+                            <a href=" " className="fw-semibold text-muted text-hover-primary fs-7">amit@cumilab.co.in</a>
                           </div>
                           {/*end::Username*/}
                         </div>
@@ -230,17 +231,17 @@ const Dashboard = () => {
                       {/*end::Menu separator*/}
                       {/*begin::Menu item*/}
                       <div className="menu-item px-5">
-                        <a href="#" className="menu-link px-5">My Profile</a>
+                        <a href=" " className="menu-link px-5">My Profile</a>
                       </div>
                       {/*end::Menu item*/}
                       {/*begin::Menu item*/}
                       <div className="menu-item px-5 my-1">
-                        <a href="#" className="menu-link px-5">Account Settings</a>
+                        <a href=" " className="menu-link px-5">Account Settings</a>
                       </div>
                       {/*end::Menu item*/}
                       {/*begin::Menu item*/}
                       <div className="menu-item px-5">
-                        <a href="login.html" className="menu-link px-5">Sign Out</a>
+                        <Link to="/" className="menu-link px-5">Sign Out</Link>
                       </div>
                       {/*end::Menu item*/}
                     </div>
@@ -272,7 +273,7 @@ const Dashboard = () => {
                     <ul className="breadcrumb breadcrumb-separatorless fw-semibold">
                       {/*begin::Item*/}
                       <li className="breadcrumb-item text-white fw-bold lh-1">
-                        <a href="#" className="text-white">
+                        <a href=" " className="text-white">
                           <i className="fonticon-home text-gray-700 fw-bold fs-3" />
                         </a>
                       </li>
@@ -309,7 +310,7 @@ const Dashboard = () => {
                     {/*end::Page title*/}
                     {/*begin::Stats*/}
                     <div className="d-flex align-self-center flex-center flex-shrink-0">
-                      <a href="#" className="btn btn-sm border btn-active-color-white btn-custom px-4" data-bs-toggle="modal" data-bs-target="#kt_modal_new_target">
+                      <a href=" " className="btn btn-sm border btn-active-color-white btn-custom px-4" data-bs-toggle="modal" data-bs-target="#kt_modal_new_target">
                         {/*begin::Svg Icon | path: icons/duotune/general/gen035.svg*/}
                         <span className="svg-icon svg-icon-3">
                           <svg width={24} height={24} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -321,7 +322,7 @@ const Dashboard = () => {
                         {/*end::Svg Icon*/}
                         <span className="ms-n1">Create Project</span>
                       </a>
-                      <a href="#" className="btn btn-sm btn-active-color-white border btn-custom ms-3 px-4" data-bs-toggle="modal" data-bs-target="#">
+                      <a href=" " className="btn btn-sm btn-active-color-white border btn-custom ms-3 px-4" data-bs-toggle="modal" data-bs-target="#">
                         {/*begin::Svg Icon | path: icons/duotune/general/gen035.svg*/}
                         <span className="svg-icon svg-icon-3">
                           <svg width={24} height={24} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -376,7 +377,7 @@ const Dashboard = () => {
                             {/*end::Title*/}
                             {/*begin::Action*/}
                             <div className="m-0">
-                              <a href="#" className="btn btn-dark fw-semibold px-6 py-3" data-bs-toggle="modal" data-bs-target="#kt_modal_new_target">
+                              <a href=" " className="btn btn-dark fw-semibold px-6 py-3" data-bs-toggle="modal" data-bs-target="#kt_modal_new_target">
                                 {/*begin::Svg Icon | path: icons/duotune/general/gen035.svg*/}
                                 <span className="svg-icon svg-icon-3">
                                   <svg width={24} height={24} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -429,7 +430,7 @@ const Dashboard = () => {
                                         <td>
                                           <div className="symbol symbol-45px me-2">
                                             <span className="symbol-label">
-                                              <img className="mw-50px mw-lg-45px" src="assets/media/misc/project-1-logo.png" alt="image" />
+                                              <img className="mw-50px mw-lg-45px" src="assets/media/misc/project-1-logo.png" alt="logo" />
                                             </span>
                                           </div>
                                         </td>
@@ -458,7 +459,7 @@ const Dashboard = () => {
                                         <td>
                                           <div className="symbol symbol-45px me-2">
                                             <span className="symbol-label">
-                                              <img className="mw-50px mw-lg-45px" src="assets/media/misc/project-1-logo.png" alt="image" />
+                                              <img className="mw-50px mw-lg-45px" src="assets/media/misc/project-1-logo.png" alt="logo" />
                                             </span>
                                           </div>
                                         </td>
@@ -487,7 +488,7 @@ const Dashboard = () => {
                                         <td>
                                           <div className="symbol symbol-45px me-2">
                                             <span className="symbol-label">
-                                              <img className="mw-50px mw-lg-45px" src="assets/media/misc/project-1-logo.png" alt="image" />
+                                              <img className="mw-50px mw-lg-45px" src="assets/media/misc/project-1-logo.png" alt="logo" />
                                             </span>
                                           </div>
                                         </td>
@@ -500,7 +501,7 @@ const Dashboard = () => {
                                           <span className="badge badge-light-danger">Rejected</span>
                                         </td>
                                         <td className="text-end">
-                                          <a href="#" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary">
+                                          <a href=" " className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary">
                                             {/*begin::Svg Icon | path: icons/duotune/arrows/arr064.svg*/}
                                             <span className="svg-icon svg-icon-2">
                                               <svg width={24} height={24} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -537,16 +538,16 @@ const Dashboard = () => {
                   {/*begin::Copyright*/}
                   <div className="text-dark order-2 order-md-1">
                     <span className="text-muted fw-semibold me-1">© 2023</span>
-                    <a href="#" target="_blank" className="text-gray-800 text-hover-primary">CuMiLab </a> | All Rights Reserved.
+                    <a href=" " target="_blank" className="text-gray-800 text-hover-primary">CuMiLab </a> | All Rights Reserved.
                   </div>
                   {/*end::Copyright*/}
                   {/*begin::Menu*/}
                   <ul className="menu menu-gray-600 menu-hover-primary fw-semibold order-1">
                     <li className="menu-item">
-                      <a href="#" target="_blank" className="menu-link px-2">Privacy Policy</a>
+                      <a href=" " target="_blank" className="menu-link px-2">Privacy Policy</a>
                     </li>
                     <li className="menu-item">
-                      <a href="#" target="_blank" className="menu-link px-2">Terms of Service</a>
+                      <a href=" " target="_blank" className="menu-link px-2">Terms of Service</a>
                     </li>
                   </ul>
                   {/*end::Menu*/}
@@ -608,7 +609,7 @@ const Dashboard = () => {
                   {/*end::Title*/}
                   {/*begin::Description*/}
                   <div className="text-muted fw-semibold fs-5">If you need more info, please check
-                    <a href="#" className="fw-bold link-primary">Project Guidelines</a>.</div>
+                    <a href=" " className="fw-bold link-primary">Project Guidelines</a>.</div>
                   {/*end::Description*/}
                 </div>
                 {/*end::Heading*/}
