@@ -53,12 +53,12 @@ const TwoStepVerification = () => {
                 <div className="mb-10">
                   <div className="fw-bold text-start text-dark fs-6 mb-1 ms-1">Type your 6 digit security code</div>
                   <div className="d-flex flex-wrap flex-stack">
-                    <input type="text" name="code_1" data-inputmask="'mask': '9', 'placeholder': ''" maxLength="1" className="form-control bg-transparent h-60px w-60px fs-2qx text-center mx-1 my-2" value="" onChange={handleOTPChange}/>
-                    <input type="text" name="code_2" data-inputmask="'mask': '9', 'placeholder': ''" maxLength="1" className="form-control bg-transparent h-60px w-60px fs-2qx text-center mx-1 my-2" value="" onChange={handleOTPChange}/>
-                    <input type="text" name="code_3" data-inputmask="'mask': '9', 'placeholder': ''" maxLength="1" className="form-control bg-transparent h-60px w-60px fs-2qx text-center mx-1 my-2" value="" onChange={handleOTPChange}/>
-                    <input type="text" name="code_4" data-inputmask="'mask': '9', 'placeholder': ''" maxLength="1" className="form-control bg-transparent h-60px w-60px fs-2qx text-center mx-1 my-2" value="" onChange={handleOTPChange}/>
-                    <input type="text" name="code_5" data-inputmask="'mask': '9', 'placeholder': ''" maxLength="1" className="form-control bg-transparent h-60px w-60px fs-2qx text-center mx-1 my-2" value="" onChange={handleOTPChange}/>
-                    <input type="text" name="code_6" data-inputmask="'mask': '9', 'placeholder': ''" maxLength="1" className="form-control bg-transparent h-60px w-60px fs-2qx text-center mx-1 my-2" value="" onChange={handleOTPChange}/>
+                    <input type="text" name="code_1" data-inputmask="'mask': '9', 'placeholder': ''" maxLength="1" className="form-control bg-transparent h-60px w-60px text-center mx-1 my-2" value="" onChange={handleOTPChange}/>
+                    <input type="text" name="code_2" data-inputmask="'mask': '9', 'placeholder': ''" maxLength="1" className="form-control bg-transparent h-60px w-60px text-center mx-1 my-2" value="" onChange={handleOTPChange}/>
+                    <input type="text" name="code_3" data-inputmask="'mask': '9', 'placeholder': ''" maxLength="1" className="form-control bg-transparent h-60px w-60px text-center mx-1 my-2" value="" onChange={handleOTPChange}/>
+                    <input type="text" name="code_4" data-inputmask="'mask': '9', 'placeholder': ''" maxLength="1" className="form-control bg-transparent h-60px w-60px text-center mx-1 my-2" value="" onChange={handleOTPChange}/>
+                    <input type="text" name="code_5" data-inputmask="'mask': '9', 'placeholder': ''" maxLength="1" className="form-control bg-transparent h-60px w-60px text-center mx-1 my-2" value="" onChange={handleOTPChange}/>
+                    <input type="text" name="code_6" data-inputmask="'mask': '9', 'placeholder': ''" maxLength="1" className="form-control bg-transparent h-60px w-60px text-center mx-1 my-2" value="" onChange={handleOTPChange}/>
                   </div>
                 </div>
                 <div className="d-flex flex-center">

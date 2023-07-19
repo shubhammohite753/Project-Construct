@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
-import Swal from 'sweetalert2';
+// import Swal from 'sweetalert2';
 
 const SignIn = () => {
   const [email, setEmail] = useState('');
@@ -25,25 +25,9 @@ const SignIn = () => {
 
   const handleSignIn = (data) => {
     console.log('Sign In submitted:', data);
-    // Perform your sign-in logic here
-    // You can replace this console.log with your actual logic, such as making an API request
-    // If the sign-in is successful, you can show a success message using Swal.fire()
-    Swal.fire({
-      text: 'You have successfully logged in!',
-      icon: 'success',
-      confirmButtonText: 'Ok, got it!',
-      customClass: {
-        confirmButton: 'btn btn-primary',
-      },
-    }).then((result) => {
-      if (result.isConfirmed) {
-        reset(); // Reset the form fields
-        // Add any additional logic here after successful sign-in
+        reset();
         window.location.href = '/otp-verification';
-      }
-    });
-  };
-
+      };
   return (
     <div id="kt_body" className="app-blank">
       <div className="d-flex flex-column flex-root vh-100" id="kt_app_root">
