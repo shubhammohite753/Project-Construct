@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 
 const Help = () => {
@@ -50,7 +50,18 @@ const Help = () => {
         return shuffledQuestions.slice(0, count);
       };
     
+      const [expandedQuestions, setExpandedQuestions] = useState([]);
+    
+      const toggleQuestion = (index) => {
+        if (expandedQuestions.includes(index)) {
+          setExpandedQuestions(expandedQuestions.filter((i) => i !== index));
+        } else {
+          setExpandedQuestions([...expandedQuestions, index]);
+        }
+      };
+    
       const randomQuestions = getRandomQuestions(10);
+    
     
       return (
         <div id="kt_app_body" data-kt-app-header-fixed-mobile="true" data-kt-app-toolbar-enabled="true" className="app-default">
@@ -103,7 +114,7 @@ const Help = () => {
                       <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="bottom-start" className="menu-item menu-lg-down-accordion menu-sub-lg-down-indention me-0 me-lg-2"> 
                         {/*begin:Menu link*/}
                         <span className="menu-link">
-                          <Link to="/"><span className="menu-title">Projects</span></Link>
+                          <Link to="/project"><span className="menu-title">Projects</span></Link>
                           <span className="menu-arrow d-lg-none" />
                         </span>
                         {/*end:Menu link*/}
@@ -378,17 +389,7 @@ const Help = () => {
                                 </div>
                                 {/*end::Details*/}
                                 {/* Help page bgin */}
-                                <div className="d-flex align-items-center mb-2">
-                                  <div className="text-100 fs-4 ">
-                                   {randomQuestions.map((question, index) => (
-                                   <div key={index} >
-                                     <h3>{question.question}</h3>
-                                     <p>{question.answer}</p>
-                                   </div>
-                                  ))}
-                                 </div>
-                                </div>
-                              </div>
+                                
                               {/* Help page end */}
                               {/*end::Head*/}
                              
@@ -401,7 +402,30 @@ const Help = () => {
                         </div>
                       </div>
                       {/*end::Navbar*/}
-                     
+                      <div className="d-flex align-items-center mb-2">
+      <div className="text-100 fs-4">
+        {randomQuestions.map((question, index) => (
+          <div
+            key={index}
+            style={{ marginBottom: '10px', marginLeft: '20px' }}
+          >
+            <h3
+              onClick={() => toggleQuestion(index)}
+              style={{ cursor: 'pointer', color: 'blue' }}
+            >
+              {question.question}{' '}
+              <span
+                className="plus-icon"
+                style={{ cursor: 'pointer' }}
+              >
+                +
+              </span>
+            </h3>
+            {expandedQuestions.includes(index) && <p>{question.answer}</p>}
+          </div>
+        ))}
+      </div>
+    </div>
                       {/*begin::Gallery Development*/}
                       
                     </div>
@@ -447,6 +471,7 @@ const Help = () => {
             </svg>
           </span>
           {/*end::Svg Icon*/}
+        </div>
         </div>
         </div>
       );

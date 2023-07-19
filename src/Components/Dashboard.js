@@ -87,7 +87,8 @@ const Dashboard = () => {
                     <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="bottom-start" className="menu-item menu-lg-down-accordion menu-sub-lg-down-indention me-0 me-lg-2">
                       {/*begin:Menu link*/}
                       <span className="menu-link">
-                        <span className="menu-title">Help</span>
+                        <Link to="/help">
+                        <span className="menu-title">Help</span></Link>
                         <span className="menu-arrow d-lg-none" />
                       </span>
                       {/*end:Menu link*/}
