@@ -416,7 +416,7 @@ const Project = () => {
                         </span>
                       </li>
                       <li className="breadcrumb-item text-white fw-bold lh-1">
-                        Dashboard
+                        Projects
                       </li>
                       <li className="breadcrumb-item">
                         <span className="svg-icon svg-icon-4 svg-icon-gray-700 mx-n1">
@@ -527,12 +527,12 @@ const Project = () => {
                                       </a>
                                     </div>
                                   </div>
-                                </div> */}
-                              {/* </div> */}
+                                </div>
+                              </div> */}
                             </div>
                             <div className="d-flex flex-wrap justify-content-start">
                               <div className="d-flex flex-wrap">
-                                <div className="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3">
+                               <div className="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3">
                                   <div className="d-flex align-items-center">
                                     <div className="fs-4 fw-bold">
                                       01 Feb, 2023

@@ -118,7 +118,7 @@ const Help = () => {
                       <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="bottom-start" className="menu-item menu-lg-down-accordion menu-sub-lg-down-indention me-0 me-lg-2"> 
                         {/*begin:Menu link*/}
                         <span className="menu-link">
-                          <Link to="/project"><span className="menu-title">Projects</span></Link>
+                          <Link to="/projects"><span className="menu-title">Projects</span></Link>
                           <span className="menu-arrow d-lg-none" />
                         </span>
                         {/*end:Menu link*/}
@@ -282,7 +282,7 @@ const Help = () => {
                         {/*end::Menu item*/}
                         {/*begin::Menu item*/}
                         <div className="menu-item px-5">
-                          <a href="login.html" className="menu-link px-5">Sign Out</a>
+                          <Link to="/" className="menu-link px-5">Sign Out</Link>
                         </div>
                         {/*end::Menu item*/}
                       </div>

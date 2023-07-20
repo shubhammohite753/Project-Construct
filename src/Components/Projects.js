@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-const Dashboard = () => {
+const Projects = () => {
 
   useEffect(() => {
     const script1 = document.createElement('script');
@@ -50,17 +50,18 @@ const Dashboard = () => {
               <div className="d-flex align-items-stretch justify-content-between flex-lg-grow-1" id="kt_app_header_wrapper">
                 <div className="app-header-menu app-header-mobile-drawer align-items-stretch" data-kt-drawer="true" data-kt-drawer-name="app-header-menu" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="250px" data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_app_header_menu_toggle" data-kt-swapper="true" data-kt-swapper-mode="{default: 'append', lg: 'prepend'}" data-kt-swapper-parent="{default: '#kt_app_body', lg: '#kt_app_header_wrapper'}">
                   <div className="menu menu-rounded menu-active-bg menu-state-primary menu-column menu-lg-row menu-title-gray-700 menu-icon-gray-500 menu-arrow-gray-500 menu-bullet-gray-500 my-5 my-lg-0 align-items-stretch fw-semibold px-2 px-lg-0" id="kt_app_header_menu" data-kt-menu="true">
-                    <div data-kt-menu-placement="bottom-start" className="menu-item here show menu-here-bg menu-lg-down-accordion me-0 me-lg-2">
+                  <div data-kt-menu-placement="bottom-start" data-kt-menu-offset="-200,0" className="menu-item menu-lg-down-accordion me-0 me-lg-2">
                       <span className="menu-link">
                         <Link to="/dashboard"><span className="menu-title">Dashboard</span></Link>
                         <span className="menu-arrow d-lg-none" />
                       </span>
                     </div>
-                    <div data-kt-menu-placement="bottom-start" data-kt-menu-offset="-200,0" className="menu-item menu-lg-down-accordion me-0 me-lg-2">
-                      <span className="menu-link">
-                        <Link to="/projects"><span className="menu-title">Projects</span></Link>
+                    <div data-kt-menu-placement="bottom-start" className="menu-item here show menu-here-bg menu-lg-down-accordion me-0 me-lg-2">
+                    <span className="menu-link">
+                        <Link to="/help">
+                        <span className="menu-title">Projects</span></Link>
                         <span className="menu-arrow d-lg-none" />
-                      </span>
+                      </span> 
                     </div>
                     <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="bottom-start" className="menu-item menu-lg-down-accordion menu-sub-lg-down-indention me-0 me-lg-2">
                       <span className="menu-link">
@@ -192,14 +193,14 @@ const Dashboard = () => {
                           </svg>
                         </span>
                       </li>
-                      <li className="breadcrumb-item text-white fw-bold lh-1">Dashboard</li>
+                      <li className="breadcrumb-item text-white fw-bold lh-1">Projects</li>
                     </ul>
                   </div>
-                  <div className="d-flex flex-stack flex-wrap flex-lg-nowrap gap-4 gap-lg-10 pt-13 pb-6">
-                    <div className="page-title me-5">
+                  {/* <div className="d-flex flex-stack flex-wrap flex-lg-nowrap gap-4 gap-lg-10 pt-13 pb-6"> */}
+                    {/* <div className="page-title me-5">
                       <h1 className="page-heading d-flex text-white fw-bold fs-1 flex-column justify-content-center my-0">Welcome, Amit</h1>
-                    </div>
-                    <div className="d-flex align-self-center flex-center flex-shrink-0">
+                    </div> */}
+                    {/* <div className="d-flex align-self-center flex-center flex-shrink-0">
                       <a href=" " className="btn btn-sm border btn-active-color-white btn-custom px-4" data-bs-toggle="modal" data-bs-target="#kt_modal_new_target">
                         <span className="svg-icon svg-icon-3">
                           <svg width={24} height={24} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -228,8 +229,8 @@ const Dashboard = () => {
                           </svg>
                         </span>
                         DM Members</a>
-                    </div>
-                  </div>
+                    </div> */}
+                  {/* </div> */}
                 </div>
               </div>
             </div>
@@ -239,7 +240,7 @@ const Dashboard = () => {
                   <div id="kt_app_content" className="app-content flex-column-fluid">
                     <div className="row g-5 g-xl-8">
                       <div className="col-xl-12 ps-xl-12">
-                        <div className="card bgi-position-y-bottom bgi-position-x-end bgi-no-repeat bgi-size-cover min-h-250px bg-body mb-5 mb-xl-8" style={{backgroundPosition: '100% 20px', backgroundSize: '500px auto', backgroundImage: 'url("assets/media/misc/city-cover.png")'}} dir="ltr">
+                        {/* <div className="card bgi-position-y-bottom bgi-position-x-end bgi-no-repeat bgi-size-cover min-h-250px bg-body mb-5 mb-xl-8" style={{backgroundPosition: '100% 20px', backgroundSize: '500px auto', backgroundImage: 'url("assets/media/misc/city-cover.png")'}} dir="ltr">
                           <div className="card-body d-flex flex-column justify-content-center ps-lg-12">
                             <h3 className="text-dark fs-2qx fw-bold mb-7">CuMiLab - Curious . Minds . Laboratory</h3>
                             <h5>CuMiLab is a research and prototyping think tank with an approach to establish research inspired practice <br /> and practice informed by research. </h5>
@@ -256,7 +257,7 @@ const Dashboard = () => {
                                 Create Project</a>
                             </div>
                           </div>
-                        </div>
+                        </div> */}
                         <div className="card mb-5 mb-xl-8">
                           <div className="card-header border-0 pt-5">
                             <h2 className="card-title align-items-start flex-column">
@@ -288,7 +289,7 @@ const Dashboard = () => {
                                           </div>
                                         </td>
                                         <td>
-                                          <a href="project.html" className="text-dark fw-bold text-hover-primary mb-1 fs-4">Project 1</a>
+                                          <Link to="/project" className="text-dark fw-bold text-hover-primary mb-1 fs-4">Project 1</Link>
                                           <span className="text-muted fw-semibold d-block">Commercial Project</span>
                                         </td>
                                         <td className="text-end text-muted fw-bold">Project short description</td>
@@ -296,14 +297,14 @@ const Dashboard = () => {
                                           <span className="badge badge-light-success">Approved</span>
                                         </td>
                                         <td className="text-end">
-                                          <a href="project.html" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary">
+                                          <Link to="/project" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary">
                                             <span className="svg-icon svg-icon-2">
                                               <svg width={24} height={24} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <rect opacity="0.5" x={18} y={13} width={13} height={2} rx={1} transform="rotate(-180 18 13)" fill="currentColor" />
                                                 <path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z" fill="currentColor" />
                                               </svg>
                                             </span>
-                                          </a>
+                                          </Link>
                                         </td>
                                       </tr>
                                       <tr>
@@ -315,7 +316,7 @@ const Dashboard = () => {
                                           </div>
                                         </td>
                                         <td>
-                                          <a href="project.html" className="text-dark fw-bold text-hover-primary mb-1 fs-4">Project 2</a>
+                                          <Link to="/project" className="text-dark fw-bold text-hover-primary mb-1 fs-4">Project 2</Link>
                                           <span className="text-muted fw-semibold d-block">Resedential Project</span>
                                         </td>
                                         <td className="text-end text-muted fw-bold">Project short description</td>
@@ -323,14 +324,14 @@ const Dashboard = () => {
                                           <span className="badge badge-light-warning">Under Review</span>
                                         </td>
                                         <td className="text-end">
-                                          <a href="project.html" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary">
+                                          <Link to="/project" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary">
                                             <span className="svg-icon svg-icon-2">
                                               <svg width={24} height={24} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <rect opacity="0.5" x={18} y={13} width={13} height={2} rx={1} transform="rotate(-180 18 13)" fill="currentColor" />
                                                 <path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z" fill="currentColor" />
                                               </svg>
                                             </span>
-                                          </a>
+                                          </Link>
                                         </td>
                                       </tr>
                                       <tr>
@@ -342,7 +343,7 @@ const Dashboard = () => {
                                           </div>
                                         </td>
                                         <td>
-                                          <a href="project.html" className="text-dark fw-bold text-hover-primary mb-1 fs-4">Project 3</a>
+                                          <Link to="/project" className="text-dark fw-bold text-hover-primary mb-1 fs-4">Project 3</Link>
                                           <span className="text-muted fw-semibold d-block">Donation Project</span>
                                         </td>
                                         <td className="text-end text-muted fw-bold">Project short description</td>
@@ -350,14 +351,14 @@ const Dashboard = () => {
                                           <span className="badge badge-light-danger">Rejected</span>
                                         </td>
                                         <td className="text-end">
-                                          <a href=" " className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary">
+                                          <Link to="/project" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary">
                                             <span className="svg-icon svg-icon-2">
                                               <svg width={24} height={24} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <rect opacity="0.5" x={18} y={13} width={13} height={2} rx={1} transform="rotate(-180 18 13)" fill="currentColor" />
                                                 <path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z" fill="currentColor" />
                                               </svg>
                                             </span>
-                                          </a>
+                                          </Link>
                                         </td>
                                       </tr>
                                     </tbody>
@@ -469,4 +470,4 @@ const Dashboard = () => {
     )
 }
 
-export default Dashboard;
+export default Projects;
