@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect, useCallback, useMemo} from 'react';
 import { Link } from 'react-router-dom';
 
 const Help = () => {
-    const helpQuestions = [
+  const helpQuestions = useMemo(() => [
         {
           question: 'How do I create an account?',
           answer: 'To create an account, click on the "Sign Up" button on the homepage. Fill in the required information such as your name, email address, and password. Once completed, click the "Sign Up" button to create your account.',
@@ -43,14 +43,21 @@ const Help = () => {
           question: 'How do I unsubscribe from email notifications?',
           answer: 'To unsubscribe from email notifications, open one of our emails and scroll to the bottom. Click on the "Unsubscribe" or "Manage Preferences" link, and you will be directed to a page where you can update your email preferences or unsubscribe from specific email lists.',
         },
-      ];
-
-      const getRandomQuestions = (count) => {
+      ], []);
+      const [expandedQuestions, setExpandedQuestions] = useState([]);
+      const [randomQuestions, setRandomQuestions] = useState([]);
+    
+      // Use useCallback to memoize the getRandomQuestions function
+      const getRandomQuestions = useCallback((count) => {
         const shuffledQuestions = helpQuestions.sort(() => 0.5 - Math.random());
         return shuffledQuestions.slice(0, count);
-      };
+      }, [helpQuestions]);
     
-      const [expandedQuestions, setExpandedQuestions] = useState([]);
+      useEffect(() => {
+        const randomQuestions = getRandomQuestions(10);
+        setExpandedQuestions([]); // Reset expanded questions when new random questions are generated
+        setRandomQuestions(randomQuestions);
+      }, [getRandomQuestions]); // Include getRandomQuestions in the dependency array
     
       const toggleQuestion = (index) => {
         if (expandedQuestions.includes(index)) {
@@ -59,9 +66,6 @@ const Help = () => {
           setExpandedQuestions([...expandedQuestions, index]);
         }
       };
-    
-      const randomQuestions = getRandomQuestions(10);
-    
     
       return (
         <div id="kt_app_body" data-kt-app-header-fixed-mobile="true" data-kt-app-toolbar-enabled="true" className="app-default">
@@ -405,21 +409,12 @@ const Help = () => {
                       <div className="d-flex align-items-center mb-2">
       <div className="text-100 fs-4">
         {randomQuestions.map((question, index) => (
-          <div
-            key={index}
-            style={{ marginBottom: '10px', marginLeft: '20px' }}
-          >
+          <div key={index} style={{ marginBottom: '10px', marginLeft: '20px' }}>
             <h3
               onClick={() => toggleQuestion(index)}
               style={{ cursor: 'pointer', color: 'blue' }}
             >
-              {question.question}{' '}
-              <span
-                className="plus-icon"
-                style={{ cursor: 'pointer' }}
-              >
-                +
-              </span>
+              {question.question} <span className="plus-icon">+</span>
             </h3>
             {expandedQuestions.includes(index) && <p>{question.answer}</p>}
           </div>
