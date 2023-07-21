@@ -1,6 +1,58 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 const Project = () => {
+  useEffect(() => {
+    const script1 = document.createElement('script');
+    script1.src = 'assets/plugins/custom/datatables/datatables.bundle.js';
+    script1.async = true;
+    document.body.appendChild(script1);
+
+    const script2 = document.createElement('script');
+    script2.src = 'assets/js/custom/apps/projects/project/project.js';
+    script2.async = true;
+    document.body.appendChild(script2);
+
+    const script3 = document.createElement('script');
+    script3.src = 'assets/js/widgets.bundle.js';
+    script3.async = true;
+    document.body.appendChild(script3);
+
+    const script4 = document.createElement('script');
+    script4.src = 'assets/js/custom/widgets.js';
+    script4.async = true;
+    document.body.appendChild(script4);
+
+    const script5 = document.createElement('script');
+    script5.src = 'assets/js/custom/apps/chat/chat.js';
+    script5.async = true;
+    document.body.appendChild(script5);
+
+    const script6 = document.createElement('script');
+    script6.src = 'assets/js/custom/utilities/modals/upgrade-plan.js';
+    script6.async = true;
+    document.body.appendChild(script6);
+
+    const script7 = document.createElement('script');
+    script7.src = 'assets/js/custom/utilities/modals/new-target.js';
+    script7.async = true;
+    document.body.appendChild(script7);
+
+    const script8 = document.createElement('script');
+    script8.src = 'assets/js/custom/utilities/modals/users-search.js';
+    script8.async = true;
+    document.body.appendChild(script8);
+
+    return () => {
+      document.body.removeChild(script1);
+      document.body.removeChild(script2);
+      document.body.removeChild(script3);
+      document.body.removeChild(script4);
+      document.body.removeChild(script5);
+      document.body.removeChild(script6);
+      document.body.removeChild(script7);
+      document.body.removeChild(script8);
+    };
+  }, []);
   return (
     <div
       id="kt_app_body"

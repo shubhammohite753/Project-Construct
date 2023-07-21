@@ -436,7 +436,7 @@ const Projects = () => {
                     <i className="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip" title="Upload Project Logo" />
                   </label>
                   <style dangerouslySetInnerHTML={{__html: ".image-input-placeholder { background-image: url('assets/media/svg/files/blank-image.svg'); } [data-bs-theme=\"dark\"] .image-input-placeholder { background-image: url('assets/media/svg/files/blank-image-dark.svg'); }" }} />
-                  <div className="image-input image-input-empty image-input-outline image-input-placeholder" data-kt-image-input="true">begin::Preview existing avatar*/}
+                  <div className="image-input image-input-empty image-input-outline image-input-placeholder" data-kt-image-input="true">begin::Preview existing avatar*/
                     <div className="image-input-wrapper w-125px h-125px" />
                     <label className="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Upload Project Logo">
                       <i className="bi bi-pencil-fill fs-7" />

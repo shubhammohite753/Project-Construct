@@ -197,7 +197,7 @@ const Dashboard = () => {
                   </div>
                   <div className="d-flex flex-stack flex-wrap flex-lg-nowrap gap-4 gap-lg-10 pt-13 pb-6">
                     <div className="page-title me-5">
-                      <h1 className="page-heading d-flex text-white fw-bold fs-1 flex-column justify-content-center my-0">Welcome, Amit</h1>
+                      <h1 className="page-heading d-flex text-white fw-bold fs-1 flex-column justify-content-center my-0">Welcome, Name</h1>
                     </div>
                     <div className="d-flex align-self-center flex-center flex-shrink-0">
                       <a href=" " className="btn btn-sm border btn-active-color-white btn-custom px-4" data-bs-toggle="modal" data-bs-target="#kt_modal_new_target">
@@ -257,7 +257,10 @@ const Dashboard = () => {
                             </div>
                           </div>
                         </div>
-                        <div className="card mb-5 mb-xl-8">
+
+                        {/* =========part moved to project session======= */}
+
+                        {/* <div className="card mb-5 mb-xl-8">
                           <div className="card-header border-0 pt-5">
                             <h2 className="card-title align-items-start flex-column">
                               <span className="card-label fw-bold fs-1 mb-1">All Projects</span>
@@ -366,7 +369,10 @@ const Dashboard = () => {
                               </div>
                             </div>
                           </div>
-                        </div>
+                        </div> */}
+
+
+
                       </div>
                     </div>
                   </div>
@@ -435,7 +441,8 @@ const Dashboard = () => {
                     <i className="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip" title="Upload Project Logo" />
                   </label>
                   <style dangerouslySetInnerHTML={{__html: ".image-input-placeholder { background-image: url('assets/media/svg/files/blank-image.svg'); } [data-bs-theme=\"dark\"] .image-input-placeholder { background-image: url('assets/media/svg/files/blank-image-dark.svg'); }" }} />
-                  <div className="image-input image-input-empty image-input-outline image-input-placeholder" data-kt-image-input="true">begin::Preview existing avatar*/}
+                  <div className="image-input image-input-empty image-input-outline image-input-placeholder" data-kt-image-input="true">
+                    {/* begin::Preview existing avatar*/ }
                     <div className="image-input-wrapper w-125px h-125px" />
                     <label className="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Upload Project Logo">
                       <i className="bi bi-pencil-fill fs-7" />
