@@ -44,8 +44,8 @@ const Help = () => {
           answer: 'To unsubscribe from email notifications, open one of our emails and scroll to the bottom. Click on the "Unsubscribe" or "Manage Preferences" link, and you will be directed to a page where you can update your email preferences or unsubscribe from specific email lists.',
         },
       ], []);
-      const [expandedQuestions, setExpandedQuestions] = useState([]);
       const [randomQuestions, setRandomQuestions] = useState([]);
+      const [expandedIndex, setExpandedIndex] = useState(-1);
     
       // Use useCallback to memoize the getRandomQuestions function
       const getRandomQuestions = useCallback((count) => {
@@ -55,15 +55,15 @@ const Help = () => {
     
       useEffect(() => {
         const randomQuestions = getRandomQuestions(10);
-        setExpandedQuestions([]); // Reset expanded questions when new random questions are generated
+        setExpandedIndex(-1); // Reset expandedIndex when new random questions are generated
         setRandomQuestions(randomQuestions);
       }, [getRandomQuestions]); // Include getRandomQuestions in the dependency array
     
       const toggleQuestion = (index) => {
-        if (expandedQuestions.includes(index)) {
-          setExpandedQuestions(expandedQuestions.filter((i) => i !== index));
+        if (expandedIndex === index) {
+          setExpandedIndex(-1); // Collapse the question if it's already expanded
         } else {
-          setExpandedQuestions([...expandedQuestions, index]);
+          setExpandedIndex(index); // Expand the clicked question
         }
       };
     
@@ -399,18 +399,49 @@ const Help = () => {
                       <div className="d-flex align-items-center mb-2">
       <div className="text-100 fs-4">
         {randomQuestions.map((question, index) => (
-          <div key={index} style={{ marginBottom: '10px', marginLeft: '20px' }}>
-            <h3
+          <div key={index} style={{ marginBottom: '0px', marginLeft: '30px', width: '80vw' }}>
+            <button
+              className="accordion py-3"
               onClick={() => toggleQuestion(index)}
-              style={{ cursor: 'pointer', color: 'blue' }}
+              style={{
+                backgroundColor: expandedIndex === index ? '#2e6abd' : '#181C32',
+                color: '#efefef',
+                cursor: 'pointer',
+                padding: '12px',
+                width: '100%',
+                border: '1px solid',
+                borderStyle: 'dotted',
+                textAlign: 'left',
+                outline: 'none',
+                transition: '0.4s',
+                borderRadius: '0',
+                margin: '0',
+                lineHeight: 'inherit',
+                overflow: 'visible',
+                textTransform: 'none',
+                WebkitAppearance: 'button',
+                fontWeight: '600',
+                paddingTop: '0.75rem!important',
+                paddingBottom: '0.75rem!important',
+              }}
             >
-              {question.question} <span className="plus-icon">+</span>
-            </h3>
-            {expandedQuestions.includes(index) && <p>{question.answer}</p>}
+              {question.question}
+              <div
+                id="style-3vYB1"
+                className="style-3vYB1"
+                style={{
+                  float: 'right',
+                }}
+              >
+                {expandedIndex === index ? '-' : '+'}
+              </div>
+            </button>
+            {expandedIndex === index && <p>{question.answer}</p>}
           </div>
         ))}
       </div>
     </div>
+
                       {/*begin::Gallery Development*/}
                       
                     </div>

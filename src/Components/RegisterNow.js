@@ -9,6 +9,7 @@ export const RegisterNow = () => {
   const [showPassword, setShowPassword] = useState(false);
   
   const validationSchema = Yup.object().shape({
+    name: Yup.string().required('Name is required'),
     email: Yup.string().email('Invalid email address').required('Email is required'),
     mobile: Yup.string().required('Mobile number is required'),
     password: Yup.string()
@@ -61,7 +62,15 @@ export const RegisterNow = () => {
                 <div className="separator separator-content my-14">
                   <h1 className="w-300px text-dark-800 fw-semibold fs-0">Register Now</h1>
                 </div>
-
+                <div className="fv-row mb-8">
+                  <input
+                    type="text"
+                    placeholder="Full Name*"
+                    {...register('first name')}
+                    className={`form-control bg-transparent ${errors.name ? 'is-invalid' : ''}`}
+                  />
+                  {errors.name && <div className="invalid-feedback">{errors.name.message}</div>}
+                </div>
                 <div className="fv-row mb-8">
                   <input
                     type="text"
